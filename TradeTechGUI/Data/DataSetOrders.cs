@@ -41,11 +41,12 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-﻿namespace OPEX.SalesGUI.Data
+namespace OPEX.SalesGUI.Data
 {
-    
-    
-    public partial class DataSetOrders {
+
+
+    public partial class DataSetOrders
+    {
         partial class DataTableOrdersDataTable
         {
         }

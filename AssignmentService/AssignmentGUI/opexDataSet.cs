@@ -41,10 +41,12 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-﻿namespace OPEX.AssignmentGUI {
-    
-    
-    public partial class opexDataSet {
+namespace OPEX.AssignmentGUI
+{
+
+
+    public partial class opexDataSet
+    {
     }
 }
 

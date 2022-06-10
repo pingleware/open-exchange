@@ -41,9 +41,11 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-﻿namespace OPEX.TradingGUI {
-    
-    
-    public partial class DataSetTrades {
+namespace OPEX.TradingGUI
+{
+
+
+    public partial class DataSetTrades
+    {
     }
 }

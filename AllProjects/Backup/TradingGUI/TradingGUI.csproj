@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6D5B6A4-04B2-466E-A242-8B056853C163}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OPEX.TradingGUI</RootNamespace>
+    <AssemblyName>TradingGUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>OpEx.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.0.9.41461, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rd parties\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutTradingGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutTradingGUI.Designer.cs">
+      <DependentUpon>AboutTradingGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlgoPanels\StopAlgoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlgoPanels\StopAlgoPanel.Designer.cs">
+      <DependentUpon>StopAlgoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlgoPanels\VanillaAlgoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlgoPanels\VanillaAlgoPanel.Designer.cs">
+      <DependentUpon>VanillaAlgoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTrades.cs">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetTrades.Designer.cs">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DepthPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepthPanelControl.designer.cs">
+      <DependentUpon>DepthPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphForm.designer.cs">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILog.cs" />
+    <Compile Include="IOrderChangesSink.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderBlotter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderBlotter.Designer.cs">
+      <DependentUpon>OrderBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderGeneratorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderGeneratorDialog.Designer.cs">
+      <DependentUpon>OrderGeneratorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderGeneratorPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderGeneratorPanelControl.designer.cs">
+      <DependentUpon>OrderGeneratorPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderPanelControl.designer.cs">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutTradingGUI.resx">
+      <DependentUpon>AboutTradingGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoPanels\StopAlgoPanel.resx">
+      <DependentUpon>StopAlgoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoPanels\VanillaAlgoPanel.resx">
+      <DependentUpon>VanillaAlgoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepthPanelControl.resx">
+      <DependentUpon>DepthPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphForm.resx">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderBlotter.resx">
+      <DependentUpon>OrderBlotter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderGeneratorDialog.resx">
+      <DependentUpon>OrderGeneratorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderGeneratorPanelControl.resx">
+      <DependentUpon>OrderGeneratorPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPanelControl.resx">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeBlotter.resx">
+      <DependentUpon>TradeBlotter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="DataSetOrders.xsc">
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOrders.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOrders.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetOrders.xss">
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTrades.xsc">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTrades.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTrades.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetTrades.xss">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TradeBlotter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TradeBlotter.Designer.cs">
+      <DependentUpon>TradeBlotter.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Configuration\Client\ConfigClient.csproj">
+      <Project>{001D0DAA-D808-47C7-9ADF-17AF25E5EA90}</Project>
+      <Name>ConfigClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MarketDataService\MDSClient\MDSClient.csproj">
+      <Project>{056CB5FD-8DA8-4F86-A542-E731A6B96535}</Project>
+      <Name>MDSClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MarketDataService\MDSCommon\MDSCommon.csproj">
+      <Project>{7ED91285-26DE-4F34-8400-EAE058A8AB56}</Project>
+      <Name>MDSCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Messaging\Messaging.csproj">
+      <Project>{AE59EC13-F99D-4590-BADF-A0562B0D45CF}</Project>
+      <Name>Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OrderManager\OMCommon\OMCommon.csproj">
+      <Project>{4708ACB6-1A8D-4F2F-B277-FFDCDA112BED}</Project>
+      <Name>OMCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ShoutService\ShoutService.csproj">
+      <Project>{1FA307DA-EF60-4180-AECA-CCEF2BF424F8}</Project>
+      <Name>ShoutService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StaticData\StaticData.csproj">
+      <Project>{91265608-5D98-4987-AD0B-6A2B5CD09480}</Project>
+      <Name>StaticData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Storage\Storage\Storage.csproj">
+      <Project>{FEC62711-35C8-427A-8A7B-02612B46CC8C}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SupplyService\SSCommon\SSCommon.csproj">
+      <Project>{540A4F78-E3DB-4757-9ADF-B45206F01354}</Project>
+      <Name>SSCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TradeDataService\TradeDataService.csproj">
+      <Project>{EFBD7064-3C59-4CD9-A55F-228CEA8846AB}</Project>
+      <Name>TradeDataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OpEx.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>@if not exist C:\OPEX\TradingGUI mkdir C:\OPEX\TradingGUI
+@del C:\OPEX\TradingGUI\*.* /s /q
+@xcopy "$(TargetDir)*.*" /s /e /i /y C:\OPEX\TradingGUI
+@if exist C:\OPEX\Config\TradingGUI.exe.config xcopy C:\OPEX\Config\TradingGUI.exe.config /s /e /i /y C:\OPEX\TradingGUI</PostBuildEvent>
+  </PropertyGroup>
+</Project>

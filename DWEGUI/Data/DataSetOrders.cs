@@ -41,11 +41,12 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-﻿namespace OPEX.DWEGUI.Data
+namespace OPEX.DWEGUI.Data
 {
-    
-    
-    public partial class DataSetOrders {
+
+
+    public partial class DataSetOrders
+    {
         partial class DataTableOrdersDataTable
         {
         }

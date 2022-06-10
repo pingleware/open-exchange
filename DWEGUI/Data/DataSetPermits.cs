@@ -41,10 +41,12 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-﻿namespace OPEX.DWEGUI.Data {
-    
-    
-    public partial class DataSetPermits {
+namespace OPEX.DWEGUI.Data
+{
+
+
+    public partial class DataSetPermits
+    {
         partial class DataTablePermitsDataTable
         {
         }

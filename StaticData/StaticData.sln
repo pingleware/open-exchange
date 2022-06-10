@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData.csproj", "{91265608-5D98-4987-AD0B-6A2B5CD09480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common\Common.csproj", "{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage", "..\Storage\Storage\Storage.csproj", "{FEC62711-35C8-427A-8A7B-02612B46CC8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91265608-5D98-4987-AD0B-6A2B5CD09480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91265608-5D98-4987-AD0B-6A2B5CD09480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91265608-5D98-4987-AD0B-6A2B5CD09480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91265608-5D98-4987-AD0B-6A2B5CD09480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC62711-35C8-427A-8A7B-02612B46CC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC62711-35C8-427A-8A7B-02612B46CC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC62711-35C8-427A-8A7B-02612B46CC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC62711-35C8-427A-8A7B-02612B46CC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B20A8888-5C9B-4E47-B271-83D5F8D66222}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OPEX.DES</RootNamespace>
+    <AssemblyName>DES</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>OpEx.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AA\AdaptiveComponent.cs" />
+    <Compile Include="AA\AggressivenessModel.cs" />
+    <Compile Include="AA\BiddingComponent.cs" />
+    <Compile Include="AA\Cache.cs" />
+    <Compile Include="AA\DESAAAgent.cs" />
+    <Compile Include="AA\EquilibriumEstimator.cs" />
+    <Compile Include="AA\NewtonSolver.cs" />
+    <Compile Include="DB\JobLoader.cs" />
+    <Compile Include="GDX\BeliefFunction.cs" />
+    <Compile Include="GDX\ContinuousBeliefFunction.cs" />
+    <Compile Include="GDX\CubicEquation.cs" />
+    <Compile Include="GDX\DESGDXPricer.cs" />
+    <Compile Include="GDX\PriceBucket.cs" />
+    <Compile Include="GDX\PriceBucketSide.cs" />
+    <Compile Include="GDX\PriceContainer.cs" />
+    <Compile Include="GDX\PriceEstimator.cs" />
+    <Compile Include="GDX\ProfitFunction.cs" />
+    <Compile Include="GDX\ShoutHistory.cs" />
+    <Compile Include="GDX\TabulatedFunction.cs" />
+    <Compile Include="HUMAN\HumanAgent.cs" />
+    <Compile Include="Simulation\SimulationJob.cs" />
+    <Compile Include="Simulation\SimulationPhase.cs" />
+    <Compile Include="Simulation\SimulationStep.cs" />
+    <Compile Include="DB\WriteableFill.cs" />
+    <Compile Include="DB\WriteableShout.cs" />
+    <Compile Include="DES.cs" />
+    <Compile Include="DESAgent.cs" />
+    <Compile Include="Exchange\AggregatedDepth.cs" />
+    <Compile Include="Exchange\AggregatedDepthSide.cs" />
+    <Compile Include="Exchange\AggregatedDepthSnapshot.cs" />
+    <Compile Include="Exchange\AggregatedQuote.cs" />
+    <Compile Include="Exchange\GlobalOrderBook.cs" />
+    <Compile Include="Exchange\MarketData.cs" />
+    <Compile Include="Exchange\OrderBook.cs" />
+    <Compile Include="Exchange\OrderBookSide.cs" />
+    <Compile Include="Exchange\PriceTimePriority.cs" />
+    <Compile Include="Exchange\Shout.cs" />
+    <Compile Include="GDX\DESGDXAgent.cs" />
+    <Compile Include="IDESAgent.cs" />
+    <Compile Include="OrderManager\BaseOrder.cs" />
+    <Compile Include="OrderManager\IIncomingOrder.cs" />
+    <Compile Include="OrderManager\IOrder.cs" />
+    <Compile Include="OrderManager\IOrderProcessor.cs" />
+    <Compile Include="OrderManager\IOutgoingOrder.cs" />
+    <Compile Include="OrderManager\OrderFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation\Assignment.cs" />
+    <Compile Include="Simulation\SummaryWriter.cs" />
+    <Compile Include="Simulator.cs" />
+    <Compile Include="TimeManager.cs" />
+    <Compile Include="ZIC\DESZICAgent.cs" />
+    <Compile Include="ZIC\DESZICPricer.cs" />
+    <Compile Include="ZIP\DESZIPAgent.cs" />
+    <Compile Include="ZIP\ZIPPricer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StaticData\StaticData.csproj">
+      <Project>{91265608-5D98-4987-AD0B-6A2B5CD09480}</Project>
+      <Name>StaticData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Storage\Storage\Storage.csproj">
+      <Project>{FEC62711-35C8-427A-8A7B-02612B46CC8C}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OpEx.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>@if not exist C:\OPEX\DES mkdir C:\OPEX\DES
+@del C:\OPEX\DES\*.* /s /q
+@xcopy "$(TargetDir)*.*" /s /e /i /y C:\OPEX\DES
+@if exist C:\OPEX\Config\OPEX.DES.exe.config xcopy C:\OPEX\Config\OPEX.DES.exe.config /s /e /i /y C:\OPEX\DES</PostBuildEvent>
+  </PropertyGroup>
+</Project>

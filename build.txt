@@ -1,0 +1,7 @@
+How to build OpEx
+-----------------
+
+1. Open Microsoft Visual Studio
+2. Open the solution "AllProjects/AllProjects.sln"
+3. Build
+4. Find the binaries under C:\OPEX.

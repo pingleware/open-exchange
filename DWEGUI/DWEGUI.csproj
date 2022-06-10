@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A647492-5F0F-4481-B237-26886D4BF1CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OPEX.DWEGUI</RootNamespace>
+    <AssemblyName>SalesGUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Stocks.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.0.9.41461, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rd parties\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blinking.cs" />
+    <Compile Include="BlinkingScheduler.cs" />
+    <Compile Include="Controls\AssignmentBlotter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AssignmentBlotter.Designer.cs">
+      <DependentUpon>AssignmentBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DepthPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DepthPanelControl.designer.cs">
+      <DependentUpon>DepthPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoPanel.Designer.cs">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderBlotter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderBlotter.designer.cs">
+      <DependentUpon>OrderBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderPanelControl.designer.cs">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TradeBlotter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TradeBlotter.designer.cs">
+      <DependentUpon>TradeBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetOrders.cs">
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\DataSetOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetPermits.cs">
+      <DependentUpon>DataSetPermits.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\DataSetPermits.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPermits.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetTrades.cs">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetTrades.designer.cs">
+      <DependentUpon>DataSetTrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetTrades1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GradientFlash.cs" />
+    <Compile Include="GUILog.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMonitor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AssignmentBlotter.resx">
+      <DependentUpon>AssignmentBlotter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DepthPanelControl.resx">
+      <DependentUpon>DepthPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InfoPanel.resx">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderBlotter.resx">
+      <DependentUpon>OrderBlotter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderPanelControl.resx">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TradeBlotter.resx">
+      <DependentUpon>TradeBlotter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Data\DataSetOrders.xsc">
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\DataSetOrders.xss">
+      <DependentUpon>DataSetOrders.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetPermits.xsc">
+      <DependentUpon>DataSetPermits.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetPermits.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPermits.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DataSetPermits.xss">
+      <DependentUpon>DataSetPermits.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetTrades.xsc">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetTrades.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTrades1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\DataSetTrades.xss">
+      <DependentUpon>DataSetTrades.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssignmentService\AssignmentService\AssignmentService.csproj">
+      <Project>{4AA333DA-9FBD-45F5-A28A-DBD98E189127}</Project>
+      <Name>AssignmentService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssignmentService\DWEAS\DWEAS.csproj">
+      <Project>{E68BEE47-85D2-48CB-8B7A-39D9ABAEE607}</Project>
+      <Name>DWEAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common\Common.csproj">
+      <Project>{94DFBF2A-CA32-43BF-AEDE-0F358D434DB9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Client\ConfigClient.csproj">
+      <Project>{001D0DAA-D808-47C7-9ADF-17AF25E5EA90}</Project>
+      <Name>ConfigClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Common\ConfigCommon.csproj">
+      <Project>{8920778D-69F0-4835-BC5F-35FFD0D17031}</Project>
+      <Name>ConfigCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUICommon\GUICommon.csproj">
+      <Project>{BA2D39D6-792D-4355-96D5-09FFFA94D022}</Project>
+      <Name>GUICommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarketDataService\MDSClient\MDSClient.csproj">
+      <Project>{056CB5FD-8DA8-4F86-A542-E731A6B96535}</Project>
+      <Name>MDSClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarketDataService\MDSCommon\MDSCommon.csproj">
+      <Project>{7ED91285-26DE-4F34-8400-EAE058A8AB56}</Project>
+      <Name>MDSCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging\Messaging.csproj">
+      <Project>{AE59EC13-F99D-4590-BADF-A0562B0D45CF}</Project>
+      <Name>Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderManager\OMCommon\OMCommon.csproj">
+      <Project>{4708ACB6-1A8D-4F2F-B277-FFDCDA112BED}</Project>
+      <Name>OMCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShoutService\ShoutService.csproj">
+      <Project>{1FA307DA-EF60-4180-AECA-CCEF2BF424F8}</Project>
+      <Name>ShoutService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storage\Storage\Storage.csproj">
+      <Project>{FEC62711-35C8-427A-8A7B-02612B46CC8C}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupplyService\SSCommon\SSCommon.csproj">
+      <Project>{540A4F78-E3DB-4757-9ADF-B45206F01354}</Project>
+      <Name>SSCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeDataService\TradeDataService.csproj">
+      <Project>{EFBD7064-3C59-4CD9-A55F-228CEA8846AB}</Project>
+      <Name>TradeDataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stocks.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>@if not exist C:\OPEX\SalesGUI mkdir C:\OPEX\SalesGUI
+@del C:\OPEX\SalesGUI\*.* /s /q
+@xcopy "$(TargetDir)*.*" /s /e /i /y C:\OPEX\SalesGUI
+@if exist C:\OPEX\Config\SalesGUI.exe.config xcopy C:\OPEX\Config\SalesGUI.exe.config /s /e /i /y C:\OPEX\SalesGUI</PostBuildEvent>
+  </PropertyGroup>
+</Project>

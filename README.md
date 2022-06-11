@@ -20,7 +20,9 @@ All OpEx applications run on distributed system architectures.
 The purpose of the build is to make an open source ATS that includes EVM Smart Contracts which can be registered with the SEC.
 
   - Add ATS reporting to the Admin GUI
-  - Add Ethereum Virtual Machine for executing contracts (see https://www.nuget.org/packages/Nethereum)
+  - Add Nethereum for interacting with a private chain (see https://www.nuget.org/packages/Nethereum)
+
+Tutorial for using Nethereum with Visual Studio at https://www.youtube.com/watch?v=4t5Z3eX59k4
 
 # OpEx Reference
 ## Standard Components

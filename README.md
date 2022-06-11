@@ -151,6 +151,44 @@ MaxPrice|1000|The maximum price at which the product can be traded
 PriceTick|1|The smallest price change
 
 ### Trading GUI
+The Trading GUI is a graphical application that lets you interact with the market.
+You can enter new orders, change or cancel your previously entered orders, watch their execution and status in the blotters.
+
+Configuration
+A sample configuration file is provided below.
+
+  <?xml version="1.0" encoding="utf-8" ?>
+  <configuration>
+    <appSettings>
+      <add key="LogFolder" value="C:\OPEX\Log"/>
+      <add key="ApplicationName" value="GUIdemo"/>
+
+      <add key="DefaultRIC" value="VOD.L"/>
+
+      <add key="CSChannelName" value="ConfigurationServiceChannel"/>
+      <add key="CSHost" value="localhost"/>
+      <add key="CSPort" value="12000"/>
+      <add key="CSUri" value="ConfigurationService.rem"/>
+    </appSettings>
+  </configuration>
+
+Variable|Default|Meaning
+:----- | :----: | -----:
+LogFolder|.|The log folder of the application
+ApplicationName|N/A|The name of the OpEx application
+DefaultRIC|N/A|The default product the application will use to fill in new order tickets
+CSChannelName|N/A|The name of the channel the application will use to retrieve its configuration
+CSPort|N/A|The port the application will use to retrieve its configuration
+CSUri|N/A|The Uri the application will use to retrieve its configuration
+CSHost|N/A|The name of the host where the CS is running
+
+It is recommendable that the additional configuration needed by Trading GUI be in the Configuration table of the Database.
+
+ConfigKey|Default|Meaning
+:----- | :----: | -----:
+IDGeneratorType|Sequential|Must be set to Random
+PurgeQueuesOnStartup|true|Removes any non-processed Incoming Order messages in the queue at startup
+
 ## Simulation Tools
   - Agent Host
   - Discrete Event Simulator

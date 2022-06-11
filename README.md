@@ -79,6 +79,7 @@ A sample configuration file is provided below.
   </configuration>
 
 Variable|Default|Meaning
+:----- | :----: | -----:
 LogFolder|.|The log folder of the application
 ApplicationName|N/A|The name of the OpEx application
 CSChannelName|N/A|The name of the channel the application will use to retrieve its configuration
@@ -89,6 +90,7 @@ CSHost|N/A|The name of the host where the CS is running
 It is recommendable that the additional configuration needed by Order Manager be in the Configuration table of the Database.
 
 ConfigKey|Default|Meaning
+:----- | :----: | -----:
 OMAllowedDestinations|N/A|The comma separated list of the destinations where Order Manager will route orders (a destination is identified by its ApplicationName)
 OMAllowedDestinationsHosts|N/A|The comma separated list of the hosts where the destinations specified in OMAllowedDestinations are running
 OMMode|Client|Must be set to Server

@@ -46,7 +46,6 @@ A sample configuration file is provided below.
 
 Variable|Default|Meaning
 :----- | :----: | -----:
-Left   | Center | Right
 LogFolder|	.|	The log folder of the application
 CSChannelName|	N/A|	The name of the channel the application will use to publish configuration
 CSPort|	N/A|	The port the application will use to publish configuration

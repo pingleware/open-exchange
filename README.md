@@ -97,6 +97,59 @@ OMMode|Client|Must be set to Server
 PurgeQueuesOnStartup|true|Removes any non-processed Incoming Order messages in the queue at startup
 
 ### Matching Exchange
+The Matching Exchange processes orders as it receives them from the Order Manager, implementing the Continuous Double Auction as a market mechanism.
+
+#### Configuration
+A sample configuration file is provided below.
+
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <appSettings>
+      <add key="LogFolder" value="C:\OPEX\Log" />
+      <add key="ApplicationName" value="OPEX" />
+
+      <add key="CSChannelName" value="ConfigurationServiceChannel" />
+      <add key="CSHost" value="localhost" />
+      <add key="CSPort" value="12000" />
+      <add key="CSUri" value="ConfigurationService.rem" />    
+    </appSettings>  
+  </configuration>
+
+Variable|Default|Meaning
+:----- | :----: | -----:
+LogFolder|.|The log folder of the application
+ApplicationName|N/A|The name of the OpEx application
+CSChannelName|N/A|The name of the channel the application will use to retrieve its configuration
+CSPort|N/A|The port the application will use to retrieve its configuration
+CSUri|N/A|The Uri the application will use to retrieve its configuration
+CSHost|N/A|The name of the host where the CS is running
+
+It is recommendable that the additional configuration below needed by Matching Exchange be in the Configuration table of the Database.
+
+
+ConfigKey|Default|Meaning
+:----- | :----: | -----:
+AllowAmendments|true|Accept order instructions to amend orders
+AllowCancellations|true|Accept order instructions to cancel orders
+ClosePeriodDuration|00:00:10|The amount of time during which the exchange remains closed (close and open periods alternate cyclically)
+MDSDataSource|OPEX|The symbolic name to use as market data source
+NYSESpreadImprovement|false|Forces the NYSE spread improvement rule, for which only more aggressive orders than those currently in the orderbook are accepted
+OpenPeriodDuration|00:02:50|The amount of time during which the exchange remains open (close and open periods alternate cyclically)
+PurgeQueuesOnStartup|true|Removes any non-processed Incoming Order messages in the queue at startup
+
+#### The Instrument Table
+The Matching Exchange needs additional configuration to specify which financial products will be traded on it. Such configuration is found in the Instrument table of the OpEx DB, structured as shown in the table below.
+
+Field Name|Sample|Description
+:----- | :----: | -----:
+RIC|VOD.L|The RIC (Reuters Instrument Code) of the product
+ExchangeName|OPEX|The name of the exchange on which the product is traded
+MinQty|1|The minimum number of contract tradable in one transaction
+MaxQty|100000|The maximum number of contract tradable in one transaction
+MinPrice|1|The minimum price at which the product can be traded
+MaxPrice|1000|The maximum price at which the product can be traded
+PriceTick|1|The smallest price change
+
 ### Trading GUI
 ## Simulation Tools
   - Agent Host

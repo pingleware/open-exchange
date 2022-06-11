@@ -201,3 +201,14 @@ PurgeQueuesOnStartup|true|Removes any non-processed Incoming Order messages in t
   - GD
   - GDX
   - AA
+
+# SEC Alternative Trading Systems (ATS)
+See https://www.sec.gov/foia/docs/atslist.htm
+
+## Forms
+
+Name|Description|URL
+:----- | :----: | -----:
+ATS|Initial operation report, amendment to initial operation report and cessation of operations report for alternative trading systems (PDF)|https://www.sec.gov/files/formats.pdf
+ATS-N|NMS Stock Alternative Trading Systems (PDF)|https://www.sec.gov/files/formats-n.pdf
+ATS-R|Quarterly report of alternative trading systems activities (PDF)|https://www.sec.gov/files/formats-r.pdf

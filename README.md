@@ -17,8 +17,10 @@ All OpEx applications run on distributed system architectures.
 ![](https://a.fsdn.com/con/app/proj/open-exchange/screenshots/OrderGenerator.png/max/max/1)
 
 # TODO
+The purpose of the build is to make an open source ATS that includes EVM Smart Contracts which can be registered with the SEC.
 
   - Add ATS reporting to the Admin GUI
+  - Add Ethereum Virtual Machine for executing contracts (see https://www.nuget.org/packages/Nethereum)
 
 # OpEx Reference
 ## Standard Components

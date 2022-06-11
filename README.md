@@ -44,6 +44,22 @@ A sample configuration file is provided below.
     </appSettings>
   </configuration>
 
+Variable|Default|Meaning
+:----- | :----: | -----:
+Left   | Center | Left
+LogFolder|	.|	The log folder of the application
+CSChannelName|	N/A|	The name of the channel the application will use to publish configuration
+CSPort|	N/A|	The port the application will use to publish configuration
+CSUri|	N/A|	The Uri the application will use to publish configuration
+DBSchemaName|	N/A|	The name of the OpEx DB schema
+DBUserName|	N/A|	The user name of the OpEx DB
+DBPort|	N/A|	The port of the OpEx DB
+DBPassword|	N/A|	The password of the OpEx DB
+DBHostName|	N/A|	The name of the host where the OpEx DB is running
+PollInterval|	N/A|	The time interval, in seconds, with which the application will poll the OpEx DB to reload the configuration
+#### Notes
+The first time you run CS, a Windows Security Alert may popup, warning you that CS tried to connect to a destination on your network and it was blocked by Windows Firewall. You need to click on "Allow access" to let CS connect to the DB, and listen to incoming connection requests from OpEx applications.
+![](https://sourceforge.net/p/open-exchange/wiki/Reference%20-%20Configuration%20Server/attachment/CSFirewall.png)
 ### Order Manager
 ### Matching Exchange
 ### Trading GUI
